@@ -32,7 +32,7 @@ class MoviesList extends Component {
 
 export default MoviesList;
 
-const MovieGrid = styled.div`
+export const MovieGrid = styled.div`
   display: grid;
   padding: 1rem;
   grid-template-columns: repeat(6, 1fr);

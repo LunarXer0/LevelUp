@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Poster } from "./Movie";
 import Overdrive from "react-overdrive";
+import { Button } from "antd";
 
 const POSTER_PATH = "http://image.tmdb.org/t/p/w154";
 const BACKDROP_PATH = "http://image.tmdb.org/t/p/w1280";
@@ -38,6 +39,9 @@ class MovieDetail extends Component {
           </Overdrive>
           <div>
             <h1>{movie.title}</h1>
+            <Button onClick={() => this.props.addMovieToCollection(movie)}>
+              Add To Collection
+            </Button>
             <h3>{movie.release_date}</h3>
             <p>{movie.overview}</p>
           </div>
